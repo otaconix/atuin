@@ -9,10 +9,12 @@ use eyre::Result;
 use super::cursor::Cursor;
 
 pub mod db;
+pub mod nucleo;
 pub mod skim;
 
 pub fn engine(search_mode: SearchMode) -> Box<dyn SearchEngine> {
     match search_mode {
+        SearchMode::Nucleo => Box::new(nucleo::Search::new()) as Box<_>,
         SearchMode::Skim => Box::new(skim::Search::new()) as Box<_>,
         mode => Box::new(db::Search(mode)) as Box<_>,
     }

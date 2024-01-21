@@ -188,6 +188,7 @@ dependencies = [
  "interim",
  "itertools",
  "log",
+ "nucleo-matcher",
  "ratatui",
  "rpassword",
  "runtime-format",
@@ -1959,6 +1960,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c073d3c1930d0751774acf49e66653acecb416c3a54c6ec095a9b11caddb5a68"
 dependencies = [
  "windows-sys 0.48.0",
+]
+
+[[package]]
+name = "nucleo-matcher"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "25040628aa03c6c5e99690990b2493f5a8043e9144ad9a68c933fe4f82f2654d"
+dependencies = [
+ "memchr",
+ "unicode-segmentation",
 ]
 
 [[package]]
